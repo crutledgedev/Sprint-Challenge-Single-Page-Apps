@@ -4,21 +4,40 @@ import CharacterCard from "./CharacterCard";
 
 
 export default function ChracterList(){
-    const [details, setDetails] = useState([])
+    const [details, setDetails] = useState([]);
+    const [query, setQuery] = useState("");
 
     useEffect(() => {
         axios
         .get("https://rickandmortyapi.com/api/character/")
         .then(response =>{
-            const details = response.data.results;
+            const details = response.data.results.filter(character =>
+              character.name.toLowerCase().includes(query.toLowerCase()));
             setDetails(details);
-            console.log(details);
+            // console.log(details);
 
         })
-    },[]);
-
+    },[query]);
+    const handleInputChange = event => {
+      setQuery(event.target.value);
+    }
     return (
-        <div className="swcard">
+      <div>
+      <form>
+      <input
+      type="text"
+      onChange={handleInputChange}
+      value={query}
+      name="name"
+      tabIndex="0"
+      className="promptSearchName"
+      placeholder="search by name"
+      autoComplete="off"
+      />
+    </form>
+      
+
+        <div className="card">
             {details.map(value => <CharacterCard
             name={value.name}         
             gender={value.gender}
@@ -29,7 +48,8 @@ export default function ChracterList(){
             
             
             />)}
-
+>
+        </div>
         </div>
     )
 
@@ -40,3 +60,5 @@ export default function ChracterList(){
 
 
 }
+
+
