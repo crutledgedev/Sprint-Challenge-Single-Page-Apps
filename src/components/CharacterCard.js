@@ -14,9 +14,9 @@ font-size: 1.5rem;
 `;
 
 const InfoContainer=Styled.div`
-font-size: 1.5rem;
-color: black;
-background-color: white;
+font-size: 1.2rem;
+color: white;
+background-color: dodgerblue;
 padding: 3%;
 
 `;

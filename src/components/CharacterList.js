@@ -48,7 +48,7 @@ export default function ChracterList(){
             
             
             />)}
->
+
         </div>
         </div>
     )
