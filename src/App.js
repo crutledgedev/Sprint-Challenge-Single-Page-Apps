@@ -4,12 +4,15 @@ import {Route} from "react-router-dom";
 import WelcomePage from "./components/WelcomePage";
 import CharacterList from "./components/CharacterList";
 
+
+
 export default function App() {
   return (
     <main>
       <Header />
       <Route exact path="/" component={WelcomePage}/>      
-      <Route path="/" component={CharacterList}/>
+      <Route exact path="/Character" component={CharacterList}/>
+
     </main>
   );
 }
