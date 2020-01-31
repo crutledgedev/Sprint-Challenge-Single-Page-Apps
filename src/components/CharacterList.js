@@ -11,12 +11,9 @@ export default function ChracterList(){
         axios
         .get("https://rickandmortyapi.com/api/character/")
         .then(response =>{
-            const details = response.data.results.filter(character =>
-              character.name.toLowerCase().includes(query.toLowerCase()));
-            setDetails(details);
-            // console.log(details);
-
-        })
+            setDetails(response.data.results.filter(character => 
+            character.name.toLowerCase().includes(query.toLowerCase())));
+          })
     },[query]);
     const handleInputChange = event => {
       setQuery(event.target.value);
