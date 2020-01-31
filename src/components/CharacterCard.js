@@ -1,9 +1,6 @@
 import React from 'react';
 import Styled from 'styled-components';
-import {
-  Card, CardImg, CardText, CardBody, CardLink,
-  CardTitle, CardSubtitle
-} from 'reactstrap';
+import { Card, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 
 
 const ContentContainer = Styled.div`
