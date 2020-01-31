@@ -29,6 +29,8 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 > Answer:
 
+Client side routing with React allows us to create a single page web application that allows navigation without the page refreshing as the user navigates through the content.
+
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
