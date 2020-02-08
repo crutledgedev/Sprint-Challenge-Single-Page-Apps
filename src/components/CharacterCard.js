@@ -6,21 +6,15 @@ import { Card, CardBody, CardTitle, CardSubtitle} from 'reactstrap';
 const ContentContainer = Styled.div`
 max-width: 40%;
 margin: 0 auto;
-font-size: 1.5rem;
+font-size: 1.5rem;`
 
-`;
 
-const InfoContainer=Styled.div`
+
+const InfoContainer= Styled.div`
 font-size: 1.2rem;
 color: white;
 background-color: dodgerblue;
-padding: 3%;
-
-`;
-
-
-
-
+padding: 3%;`
 
 
 const CharacterCard = (props) => {
@@ -29,10 +23,8 @@ const CharacterCard = (props) => {
          <Card>
         <CardBody>
         <InfoContainer>
-          <CardTitle>Name: {props.name} </CardTitle>
-          <CardSubtitle>Gender: {props.gender} </CardSubtitle>
-          <CardSubtitle>Species: {props.species} </CardSubtitle>
-          <CardSubtitle>Status: {props.status} </CardSubtitle>          
+          <CardTitle>Name: {props.firstname} {props.lastname} </CardTitle>
+          <CardSubtitle>Email: {props.useremail} </CardSubtitle>      
            </InfoContainer>
         </CardBody>
         <CardBody>
