@@ -17,22 +17,14 @@ background-color: dodgerblue;
 padding: 3%;
 
 `;
-
-
-
-
-
-
 const CharacterCard = (props) => {
   return (
     <ContentContainer>                
          <Card>
         <CardBody>
         <InfoContainer>
-          <CardTitle>Name: {props.name} </CardTitle>
-          <CardSubtitle>Gender: {props.gender} </CardSubtitle>
-          <CardSubtitle>Species: {props.species} </CardSubtitle>
-          <CardSubtitle>Status: {props.status} </CardSubtitle>          
+          <CardTitle>Name: {props.firstname} {props.lastname} </CardTitle>
+          <CardSubtitle>Email: {props.useremail} </CardSubtitle>      
            </InfoContainer>
         </CardBody>
         <CardBody>
